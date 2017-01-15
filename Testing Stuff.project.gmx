@@ -44,7 +44,6 @@
     <objects name="controllers">
       <object>objects\obj_powerup_controller</object>
       <object>objects\obj_input_controller</object>
-      <object>objects\obj_pause_controller</object>
     </objects>
     <objects name="bullets">
       <objects name="bullet_spawners">

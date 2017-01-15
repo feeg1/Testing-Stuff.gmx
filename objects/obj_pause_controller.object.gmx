@@ -82,10 +82,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!paused)
-{
-    exit;
-}
+            <string>show_message("PLEASE");
 </string>
           </argument>
         </arguments>

@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>cview = 1;
+            <string>cview = 2;
+paused = false
 </string>
           </argument>
         </arguments>
@@ -48,22 +49,63 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check_pressed(vk_space))
+            <string>if(keyboard_check_pressed(vk_escape))
 {
-    view_visible[cview] = false;
-    if(cview == 2)
+    paused = !paused;
+    if(paused == true)
     {
-        cview = 0;
+        instance_deactivate_all(true);
     }
     else
     {
-        cview++;
+        instance_activate_all();
     }
-    view_visible[cview] = true;
 }
-if(keyboard_check_pressed(vk_backspace))
+if(!paused)
 {
-    createPowerUp(global.POWERUP_TURNRATE,60,60,6,100,100);
+    if(keyboard_check_pressed(vk_space))
+    {
+        view_visible[cview] = false;
+        if(cview == 2)
+        {
+            cview = 0;
+        }
+        else
+        {
+            cview++;
+        }
+        view_visible[cview] = true;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Drawing our pause menu
+if(paused)
+{
+    draw_set_colour(c_black);
+    draw_rectangle(0,0,window_get_width(),window_get_height(),0);
+    draw_set_colour(c_white);
+    draw_text(window_get_width()/2,window_get_height()/2,"Paused");
 }
 </string>
           </argument>
