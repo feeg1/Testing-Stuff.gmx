@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>tank_id = noone;
+duration = -1;
+gun_type_id = global.GUN_MACHINEGUN;
+pickup_id = global.PICKUP_TYPE_GUN;
 </string>
           </argument>
         </arguments>
@@ -51,7 +54,7 @@
             <string>tank_id = instance_place(x,y,obj_tank);
 if(tank_id != noone)
 {
-    gunPickup(tank_id,global.GUN_MACHINEGUN);
+    pickUp(tank_id,global.PICKUP_TYPE_GUN,global.GUN_MACHINEGUN,global.DURATION_INFINITE);
     instance_destroy();
 }
 </string>

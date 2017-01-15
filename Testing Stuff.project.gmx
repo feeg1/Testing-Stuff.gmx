@@ -24,6 +24,7 @@
     <script>scripts\gunPickup.gml</script>
     <script>scripts\createPowerUp.gml</script>
     <script>scripts\removePowerUp.gml</script>
+    <script>scripts\pickUp.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_tank</object>
@@ -35,8 +36,8 @@
       <object>objects\obj_default_gun</object>
       <object>objects\obj_machinegun</object>
     </objects>
-    <objects name="gun_powerup">
-      <object>objects\obj_machinegun_powerup</object>
+    <objects name="gun_pickup">
+      <object>objects\obj_machinegun_pickup</object>
     </objects>
     <objects name="terrain">
       <object>objects\obj_wall</object>

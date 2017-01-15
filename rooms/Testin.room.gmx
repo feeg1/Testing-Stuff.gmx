@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_tank" x="224" y="160" name="inst_C116758B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_machinegun_powerup" x="160" y="416" name="inst_1633096D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_machinegun_pickup" x="160" y="416" name="inst_1633096D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="0" name="inst_EAB24672" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="32" name="inst_99E8288E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="64" name="inst_D4183FD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
