@@ -3,6 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>Idea.txt</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Idea.txt</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -16,12 +35,14 @@
       <sprite>sprites\spr_gun</sprite>
       <sprite>sprites\spr_machinegun</sprite>
     </sprites>
+    <sprites name="Pickups">
+      <sprite>sprites\triple_shot</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\powerUp.gml</script>
-    <script>scripts\gunPickup.gml</script>
     <script>scripts\createPowerUp.gml</script>
     <script>scripts\removePowerUp.gml</script>
     <script>scripts\pickUp.gml</script>
@@ -35,9 +56,6 @@
     <objects name="guns">
       <object>objects\obj_default_gun</object>
       <object>objects\obj_machinegun</object>
-    </objects>
-    <objects name="gun_pickup">
-      <object>objects\obj_machinegun_pickup</object>
     </objects>
     <objects name="terrain">
       <object>objects\obj_wall</object>
@@ -57,6 +75,15 @@
     </objects>
     <objects name="enemies">
       <object>objects\Parent_Enemy</object>
+    </objects>
+    <objects name="pickups">
+      <objects name="gun_pickup">
+        <object>objects\obj_machinegun_pickup</object>
+      </objects>
+      <objects name="bullet_spawn_pickup">
+        <object>objects\obj_tripleshot_pickup</object>
+      </objects>
+      <object>objects\obj_pickup_timer</object>
     </objects>
   </objects>
   <rooms name="rooms">

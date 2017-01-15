@@ -10,36 +10,38 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>global.DURATION_INFINITE = -1;
-
+  <code>//Durations
+global.DURATION_INFINITE = -1;
+//Tank stat IDs
 global.TANK_SPEED = 0;
 global.TANK_TURNSPEED = 1;
 global.TANK_HEALTH = 2;
-
+//Tank stat defaults
 global.TANK_SPEED_DEFAULT = 1.5;
 global.TANK_TURNSPEED_DEFAULT = 1;
 global.TANK_HEALTH_DEFAULT = 10;
-
+//Powerup IDs
 global.POWERUP_DAMAGE = 0;
 global.POWERUP_HEATLH = 1;
 global.POWERUP_TURNRATE= 2;
 global.POWERUP_SPEED = 3;
-
+//Pikcup IDS
 global.PICKUP_TYPE_GUN = 0;
 global.PICKUP_TYPE_BULLET_SPAWN = 1;
 global.PICKUP_TYPE_BULLET = 2;
-
+//Gun IDS
 global.GUN_DEFAULTGUN = 0;
 global.GUN_MACHINEGUN = 1;
-
-global.PICKUP_BULLET_SPAWN_DEFAULT = 0;
-global.PICKUP_BULLET_SPAWN_TRIPLE = 1;
-
+//Bullet Spawn IDS
+global.BULLET_SPAWN_DEFAULT = 0;
+global.BULLET_SPAWN_TRIPLE = 1;
+//Bullet defaults
 global.BULLET_DEFAULT_SPEED = 5;
-
+//Damage source ids
 global.TYPE_FRIENDLY = 0;
 global.TYPE_ENEMY = 1;
 global.TYPE_GLOBAL = 2;
+//letsa go
 room_goto(Testin);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
