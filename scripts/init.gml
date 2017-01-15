@@ -1,0 +1,9 @@
+global.TANK_SPEED_ID = 1;
+global.TANK_TURNSPEED_ID = 2;
+global.TANK_HEALTH_ID = 3;
+
+global.TANK_SPEED_DEFAULT = 5;
+global.TANK_TURNSPEED_DEFAULT = 2;
+global.TANK_HEALTH_DEFAULT = 10;
+
+
