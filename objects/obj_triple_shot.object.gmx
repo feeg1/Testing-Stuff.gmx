@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>bullet_base_angle = -1;
 bullet_base_direction = -1;
+variance = global.SPREAD_OFF;
 </string>
           </argument>
         </arguments>
@@ -52,7 +53,7 @@ bullet_base_direction = -1;
             <string>for(i = 0; i&lt;3; i++)
 {
     bullet = instance_create(x,y,bullet_type);
-    bullet.direction = bullet_base_direction+10*(i-1);
+    bullet.direction = bullet_base_direction+10*(i-1)+random_range(-variance/2,variance/2);
     bullet.image_angle = bullet_base_angle;
 }
 instance_destroy();

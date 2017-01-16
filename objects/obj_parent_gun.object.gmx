@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,9 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>bullet_base_angle = -1;
-bullet_base_direction = -1;
+            <string>firerate = -1;
+damage = -1;
 variance = 0;
+tank_id = noone;
+bullet_type = obj_default_bullet;
+spawn_type = obj_default_shot;
+source_type = global.TYPE_ENEMY;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
 </string>
           </argument>
         </arguments>
@@ -50,10 +77,23 @@ variance = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>bullet = instance_create(x,y,bullet_type);
-bullet.direction = bullet_base_direction+random_range(-variance/2,variance/2);
-bullet.image_angle = bullet_base_angle;
-instance_destroy();
+            <string>image_angle = point_direction(x,y,mouse_x,mouse_y);
+
+if(mouse_check_button(mb_left) and alarm[0]=-1)
+{
+    //firerate = bullets/second. So frames/second * seconds/bullet = frames/bullet, i.e
+    //How long to wait.
+    alarm[0] = room_speed/firerate;
+    bullet_spawner = instance_create(x+tank_id.sprite_width/2*cos(degtorad(image_angle)),y-tank_id.sprite_height/2*sin(degtorad(image_angle)),spawn_type);
+    with(bullet_spawner)
+    {
+        bullet_base_angle = other.image_angle;
+        bullet_base_direction = other.image_angle;
+        bullet_type = other.bullet_type;
+        bullet_damage = other.damage;
+        variance = other.variance;
+    }
+}
 </string>
           </argument>
         </arguments>
