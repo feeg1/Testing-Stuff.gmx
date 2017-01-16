@@ -53,7 +53,11 @@ variance = global.SPREAD_OFF;
             <string>for(i = 0; i&lt;3; i++)
 {
     bullet = instance_create(x,y,bullet_type);
-    bullet.direction = bullet_base_direction+10*(i-1)+random_range(-variance/2,variance/2);
+    bullet.direction = bullet_base_direction+10*(i-1);
+    if(variance!=global.SPREAD_OFF)
+    {
+        bullet.direction+=random_range(-variance/2,variance/2);
+    }
     bullet.image_angle = bullet_base_angle;
 }
 instance_destroy();

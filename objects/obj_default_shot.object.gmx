@@ -51,7 +51,11 @@ variance = 0;
           <argument>
             <kind>1</kind>
             <string>bullet = instance_create(x,y,bullet_type);
-bullet.direction = bullet_base_direction+random_range(-variance/2,variance/2);
+bullet.direction = bullet_base_direction;
+if(variance!=global.SPREAD_OFF)
+{
+    bullet.direction+=random_range(-variance/2,variance/2);
+}
 bullet.image_angle = bullet_base_angle;
 instance_destroy();
 </string>

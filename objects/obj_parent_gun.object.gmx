@@ -91,7 +91,10 @@ if(mouse_check_button(mb_left) and alarm[0]=-1)
         bullet_base_direction = other.image_angle;
         bullet_type = other.bullet_type;
         bullet_damage = other.damage;
-        variance = other.variance;
+        if(variance != global.SPREAD_OFF)
+        {
+            variance = other.variance;
+        }
     }
 }
 </string>
