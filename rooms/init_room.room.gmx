@@ -41,6 +41,8 @@ global.BULLET_DEFAULT_SPEED = 5;
 global.TYPE_FRIENDLY = 0;
 global.TYPE_ENEMY = 1;
 global.TYPE_GLOBAL = 2;
+//spread
+global.SPREAD_OFF = -1;
 //letsa go
 room_goto(Testin);</code>
   <enableViews>0</enableViews>
